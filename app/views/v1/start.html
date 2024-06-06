@@ -1,0 +1,88 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Online Contact Form
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+
+</br>
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+        <div class="nhsuk-phase-banner no-border">
+          <p class="nhsuk-phase-banner__content">
+            <strong class="nhsuk-tag nhsuk-phase-banner__content__tag">
+              Beta
+            </strong>
+            <span class="nhsuk-phase-banner__text">
+              This is a new service - your <a class="nhsuk-link" href="#">feedback</a> will help us to improve it.
+            </span>
+          </p>
+        </div>              
+      </div>
+    </div>
+
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-full">
+
+        <form action="start" method="post">
+
+      <!-- Change the page heading -->
+      <h1>
+        Title
+      </h1>
+
+      <!-- Add content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+      <p>Body Text</p>
+
+      <h3>
+        Sub-heading
+      </h3>
+
+      <p>
+        Body Text
+      </p>
+
+      <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+        Start
+      </button>
+
+      <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-0">
+        Page last reviewed: 7th June 2024<br>
+      </p>
+
+      <!-- End of content -->
+   
+    </form>
+    </div>  
+
+  </div>
+{% endblock %}
