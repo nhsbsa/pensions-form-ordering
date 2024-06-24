@@ -1,0 +1,91 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Form ordering
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+
+ {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+  }) }}
+
+
+        <form method=“post”>
+
+          <div class="nhsuk-panel nhsuk-panel--confirmation" style="background-color:#005eb8; color:white; text-align:center; padding: 40px; margin-bottom:40px">
+            <h1 class="nhsuk-panel__title nhsuk-u-margin-bottom-4">
+              Form request has been sent
+            </h1>
+            <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">Your reference number<br><strong>FR2123F</strong></p>
+          </div>
+
+          <p>You've successfully requested a [NAME] form to be sent to:</p>
+
+          <div class="nhsuk-inset-text">
+            <span class="nhsuk-u-visually-hidden">Information: </span>
+          
+            <p>Mrs. Mia Bloggs</br>
+            <p>10 Downing Street</br>
+            London</br>
+            SW1A 2AA</p>
+          </div>
+
+          <p>We've sent you an email to confirm this.</p>
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                What happens next
+              </h1>
+            </legend>
+            
+             <p>We'll send your form within the next 7 days.</p>
+
+          </fieldset>
+          
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                Get help with your form request
+              </h1>
+            </legend>
+
+            <p>If you have any more questions before or after receiving your form, you can <a class="nhsuk-link" href="#">contact us</a>.</p>
+
+            <p><a class="nhsuk-link" href="https://online1.snapsurveys.com/interview/589f166f-daa9-4791-ba4d-e400f6adbc80?preview=true">What did you think of this service?</a> (Survey will take 30 seconds)</p>
+
+          </fieldset>
+
+    </div>
+   
+
+    </form>
+  </div>
+</div>
+
+<script>
+  function setLocation(element) {
+    document.forms[0].action = element.value
+  }
+</script>
+{% endblock %}
+

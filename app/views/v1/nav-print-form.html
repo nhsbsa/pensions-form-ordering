@@ -1,0 +1,100 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Form ordering
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+ 
+{{ backLink({
+  "href": "javascript:history.go(-1)",
+  "text": "Go back"
+}) }}
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-full">
+
+      <form method=“post”>
+
+      <!-- Change the page heading -->
+
+
+      <!-- Add content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+     
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l"> 
+            <span class="nhsuk-caption-l nhsuk-caption--bottom">Requesting a form</span>
+
+            <div class="nhsuk-inset-text">
+              <span class="nhsuk-u-visually-hidden">Information: </span>
+            
+              <p>You have chosen to download a [NAME] form. <a href="nav-form-select">
+                Download a different form<span class="nhsuk-u-visually-hidden"> name</span>
+              </a></p>
+            </div>
+
+            <h1 class="nhsuk-fieldset__heading">
+              Next steps</h1>
+          </legend>
+      
+     <ul class="nhsuk-list nhsuk-list--bullet">
+    
+            <li>Download the form</li>
+            <li>Print the form</li>
+            <li>Complete form</li>
+            <li>Post the form</li>
+            
+        </ul>
+
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l"> 
+            <h1 class="nhsuk-fieldset__heading">
+              What to expect</h1>
+          </legend>
+      
+     <ul class="nhsuk-list nhsuk-list--bullet">
+    
+            <li>One we receive your form it can take up to 2 weeks to process</li>
+            <li>You will get a response via the contact details you give us on the form</li>
+            
+        </ul>
+          
+        </fieldset>
+      
+      </div>
+      <button class="nhsuk-button" type="submit">
+        Download form
+      </button>
+
+      <!-- End of content -->
+    </form>
+    </div>  
+
+  </div>
+
+  <script>
+    function setLocation(element) {
+      document.forms[0].action = element.value
+    }
+  </script>
+{% endblock %}

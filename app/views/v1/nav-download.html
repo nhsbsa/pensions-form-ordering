@@ -1,0 +1,92 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Form ordering
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+ 
+{{ backLink({
+  "href": "javascript:history.go(-1)",
+  "text": "Go back"
+}) }}
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-full">
+
+      <form method="post">
+
+      <!-- Change the page heading -->
+
+
+      <!-- Add content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+     
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l"> 
+            <span class="nhsuk-caption-l nhsuk-caption--bottom">Requesting a form</span>
+            <h1 class="nhsuk-fieldset__heading">
+              Would you like to download and print your form now?</h1>
+          </legend>
+
+        <p>Your request will be processed faster if you can download and print the form now, if this is not possible select no and we will collect some details to post a form to you.</p>
+        
+        <div class="nhsuk-form-group">
+          <div class="nhsuk-radios">
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="#" name="example" type="radio"
+                value="nav-print-form" onclick="setLocation(this);">
+              <label class="nhsuk-label nhsuk-radios__label" for="nav-download">
+               Yes, download the form now
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="#" name="example" type="radio"
+                value="contact-name" onclick="setLocation(this);">
+              <label class="nhsuk-label nhsuk-radios__label" for="nav-download">
+                No, post a form to me
+              </label>
+            </div> 
+
+          </div>
+          
+        </fieldset>
+      
+      </div>
+      <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+        Continue
+      </button>
+
+      <!-- End of content -->
+    </form>
+    </div>  
+
+  </div>
+
+  <script>
+    function setLocation(element) {
+      document.forms[0].action = element.value
+    }
+  </script>
+{% endblock %}

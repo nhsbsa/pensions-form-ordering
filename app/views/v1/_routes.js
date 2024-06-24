@@ -12,13 +12,9 @@ const router = express.Router();
 
 // Start page
 router.post(/start/, (req, res) => {
-    res.redirect('date-of-birth')
+    res.redirect('nav-form-select')
 });
 
-// What is your date of birth?
-router.post(/date-of-birth/, (req, res) => {
-    res.redirect('previous-contracts')
-});
 
 
 module.exports = router;

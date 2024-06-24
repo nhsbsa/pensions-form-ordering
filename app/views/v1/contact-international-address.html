@@ -1,0 +1,83 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Form ordering
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+ 
+ {{ backLink({
+    "href": "javascript:history.go(-1)",
+    "text": "Go back"
+  }) }}
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1 class="nhsuk-heading-l">
+        <span class="nhsuk-caption-l nhsuk-caption--bottom">Your details</span>
+
+    </span>
+
+      <form action="contact-check-your-answers" method="post">
+
+        <div class="nhsuk-character-count" data-module="nhsuk-character-count" data-maxlength="200">
+
+          <div class="nhsuk-form-group">
+            <h1 class="nhsuk-label-wrapper">
+              <label class="nhsuk-label nhsuk-label--l" for="more-detail">
+                What is your postal address?
+              </label>
+            </h1>
+            <div class="nhsuk-hint" id="more-detail-hint">
+              Include details such as your building number or name, street or road name, province or area, post or zip code and country.
+            </div>
+            <textarea class="nhsuk-textarea nhsuk-js-character-count" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+          </div>
+        
+          <div class="nhsuk-hint nhsuk-character-count__message" id="more-detail-info">
+            You can enter up to 200 characters
+          </div>
+        
+        </div>
+
+            </div>
+
+</div>
+
+
+        <div class="nhsuk-form-group">
+          <button class="nhsuk-button" type="submit">
+            Continue
+          </button>
+
+          </div>
+
+      </form>
+    </div>
+  </div>
+
+
+  <script>
+    function setLocation(element) {
+            document.forms[0].action = element.value
+    }
+  </script>
+{% endblock %}

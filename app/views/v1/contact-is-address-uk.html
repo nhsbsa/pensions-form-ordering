@@ -1,0 +1,91 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Form ordering
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+ 
+{{ backLink({
+  "href": "javascript:history.go(-1)",
+  "text": "Go back"
+}) }}
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-full">
+
+      <form method=“post”>
+
+      <!-- Change the page heading -->
+
+
+      <!-- Add content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+     
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l"> 
+            <span class="nhsuk-caption-l nhsuk-caption--bottom">Your details</span>
+            <h1 class="nhsuk-fieldset__heading">
+              Is your address in the UK?</h1>
+          </legend>
+          <p>If your postal address is outside of the UK, select no.</p>
+             
+          <div class="nhsuk-form-group">
+            <div class="nhsuk-radios">
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="#" name="example" type="radio"
+                  value="contact-postcode-lookup" onclick="setLocation(this);">
+                <label class="nhsuk-label nhsuk-radios__label" for="eligibility-contact-employer">
+                 Yes
+                </label>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="#" name="example" type="radio"
+                  value="contact-international-address" onclick="setLocation(this);">
+                <label class="nhsuk-label nhsuk-radios__label" for="confirmation-time-36">
+                  No
+                </label>
+              </div>
+
+            </div>
+          
+        </fieldset>
+      
+      </div>
+      <button class="nhsuk-button" type="submit">
+        Continue
+      </button>
+
+      <!-- End of content -->
+    </form>
+    </div>  
+
+  </div>
+
+  <script>
+    function setLocation(element) {
+      document.forms[0].action = element.value
+    }
+  </script>
+{% endblock %}
