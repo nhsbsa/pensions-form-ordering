@@ -1,0 +1,208 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Form ordering
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+ 
+{{ backLink({
+  "href": "javascript:history.go(-1)",
+  "text": "Go back"
+}) }}
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-full">
+
+      <form action="nav-download" method="post">
+
+      <!-- Change the page heading -->
+
+
+      <!-- Add content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+     
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l"> 
+            <span class="nhsuk-caption-l nhsuk-caption--bottom">Requesting a form</span>
+            
+
+          <div class="nhsuk-form-group">
+
+            <fieldset class="nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                <h1 class="nhsuk-fieldset__heading">
+                  Which form would you like?
+                </h1>
+              </legend>
+          
+              <div class="nhsuk-radios">
+          
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="example-hints-a" name="example-hints" type="radio" value="a" aria-describedby="example-hints-a-item-hint">
+                  <label class="nhsuk-label nhsuk-radios__label" for="example-hints-a">
+                    Form A
+                  </label>
+                  <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-a-item-hint">
+                    More information would be shown here about the form.
+                  </div>
+                </div>
+          
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="example-hints-b" name="example-hints" type="radio" value="b" aria-describedby="example-hints-b-item-hint">
+                  <label class="nhsuk-label nhsuk-radios__label" for="example-hints-b">
+                    Form B
+                  </label>
+                  <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-b-item-hint">
+                    More information would be shown here about the form.
+                  </div>
+                </div>
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="example-hints-c" name="example-hints" type="radio" value="c" aria-describedby="example-hints-c-item-hint">
+                  <label class="nhsuk-label nhsuk-radios__label" for="example-hints-c">
+                    Form C
+                  </label>
+                  <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-c-item-hint">
+                    More information would be shown here about the form.
+                  </div>
+                </div>
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="example-hints-d" name="example-hints" type="radio" value="d" aria-describedby="example-hints-d-item-hint">
+                  <label class="nhsuk-label nhsuk-radios__label" for="example-hints-d">
+                    Form D
+                  </label>
+                  <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-d-item-hint">
+                    More information would be shown here about the form.
+                  </div>
+                </div>
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="example-hints-e" name="example-hints" type="radio" value="e" aria-describedby="example-hints-e-item-hint">
+                  <label class="nhsuk-label nhsuk-radios__label" for="example-hints-e">
+                    Form E
+                  </label>
+                  <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-e-item-hint">
+                    More information would be shown here about the form.
+                  </div>
+                </div>
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="example-hints-f" name="example-hints" type="radio" value="f" aria-describedby="example-hints-f-item-hint">
+                  <label class="nhsuk-label nhsuk-radios__label" for="example-hints-f">
+                    Form F
+                  </label>
+                  <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-f-item-hint">
+                    More information would be shown here about the form.
+                  </div>
+                </div>
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="example-hints-g" name="example-hints" type="radio" value="g" aria-describedby="example-hints-g-item-hint">
+                  <label class="nhsuk-label nhsuk-radios__label" for="example-hints-g">
+                    Form G
+                  </label>
+                  <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-g-item-hint">
+                    More information would be shown here about the form.
+                  </div>
+                </div>
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="example-hints-h" name="example-hints" type="radio" value="h" aria-describedby="example-hints-h-item-hint">
+                  <label class="nhsuk-label nhsuk-radios__label" for="example-hints-h">
+                    Form H
+                  </label>
+                  <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-h-item-hint">
+                    More information would be shown here about the form.
+                  </div>
+                </div>
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="example-hints-i" name="example-hints" type="radio" value="i" aria-describedby="example-hints-i-item-hint">
+                  <label class="nhsuk-label nhsuk-radios__label" for="example-hints-i">
+                    Form I
+                  </label>
+                  <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-i-item-hint">
+                    More information would be shown here about the form.
+                  </div>
+                </div>
+
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="example-hints-j" name="example-hints" type="radio" value="j" aria-describedby="example-hints-j-item-hint">
+                  <label class="nhsuk-label nhsuk-radios__label" for="example-hints-j">
+                    Form J
+                  </label>
+                  <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-j-item-hint">
+                    More information would be shown here about the form.
+                  </div>
+                </div>
+
+                <div class="nhsuk-radios__divider">or</div>
+
+                <div class="nhsuk-radios nhsuk-radios--conditional">
+          
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="contact-name" aria-controls="conditional-contact-1" aria-expanded="false"
+                    value="SDNUMBER" onclick="setLocation(this);">
+                    <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+                      The form I want is not listed
+                    </label>
+                  </div>
+            
+                  <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
+            
+                    <div class="nhsuk-form-group">
+                      <p>If you can not find the form you need in the list, request the type of form you would like in the box below by entering a reference number or name.</p>
+                      <label class="nhsuk-label" for="FORMREF">
+                        Form number or name
+                      </label>
+                      <input class="nhsuk-input nhsuk-u-width-two-thirds" id="number" name="number" type="text">
+                    </div>
+            
+                  </div>
+                  
+                </div>
+          
+                
+        </div>
+      </div>
+    </div>
+      
+      
+      <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+        Continue
+      </button>
+      </div>
+
+      <!-- End of content -->
+    </form>
+    </div>  
+
+  </div>
+
+  <script>
+    function setLocation(element) {
+      document.forms[0].action = element.value
+    }
+  </script>
+{% endblock %}
