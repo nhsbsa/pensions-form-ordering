@@ -38,7 +38,7 @@
             <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">Your reference number<br><strong>FR2123F</strong></p>
           </div>
 
-          <p>You've successfully requested a [NAME] form to be sent to:</p>
+          <p>You've successfully requested a {{ data['formType'] | default('[NAME]') }} form to be sent to:</p>
 
           <div class="nhsuk-inset-text">
             <span class="nhsuk-u-visually-hidden">Information: </span>

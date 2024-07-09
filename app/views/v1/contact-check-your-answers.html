@@ -46,7 +46,7 @@
               Requested form
             </dt>
             <dd class="nhsuk-summary-list__value">
-              AP1
+              {{ data['formType'] | default('[NAME]') }}
             </dd>
           
             <dd class="nhsuk-summary-list__actions">
@@ -119,9 +119,7 @@
     Address
   </dt>
   <dd class="nhsuk-summary-list__value">
-    <p>10 Downing Street</p>
-    <p>London</p>
-    <p>SW1A 2AA</p>
+    {{ data['addressList'] | default('[NAME]') }}
   </dd>
 
   <dd class="nhsuk-summary-list__actions">
