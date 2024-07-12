@@ -11,13 +11,7 @@ const router = express.Router();
 
 
 // Start page
-router.post(/basic-routing-radio, (req, res) => {
-    let Deferred benefit claim form (AW8P) = req.session.data['contact']
-    if (Deferred benefit claim form (AW8P)== "yes"){
-        res.redirect("nav-download")
-    }else {
-        res.redirect ("contact-name")
-    }
+router.post(/basic-routing-radio, (req, res) => 
     res.redirect('nav-form-select')
 });
 
