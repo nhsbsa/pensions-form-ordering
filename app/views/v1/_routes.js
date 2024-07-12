@@ -11,7 +11,7 @@ const router = express.Router();
 
 
 // Start page
-router.post(/basic-routing-radio, (req, res) => 
+router.post(/start/, (req, res) => 
     res.redirect('nav-form-select')
 });
 
