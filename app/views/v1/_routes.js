@@ -12,8 +12,23 @@ const router = express.Router();
 
 // Start page
 router.post(/start/, (req, res) => {
-    res.redirect('nav-form-select')
+    res.redirect('nav-form-select-radios')
 });
+
+//Nav-form-select-radios page
+router.post(/nav-form-select-radios/, (req, res) => {
+
+    const contract = req.session.data['contact']
+
+    if (contract == 'not') {
+        res.redirect('contact-name')
+    } else {
+        res.redirect('nav-download')
+
+    }
+});
+
+
 
 
 
