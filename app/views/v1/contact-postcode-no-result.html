@@ -1,0 +1,95 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Form ordering
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+
+ 
+{{ backLink({
+  "href": "javascript:history.go(-1)",
+  "text": "Go back"
+}) }}
+
+
+        <div>
+          <form action="contact-postcode-no-result" method="post">
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                <span class="nhsuk-caption-l nhsuk-caption--bottom">Your details</span>
+                No address has been found for this postcode
+              </h1>
+              
+        
+      <span class="nhsuk-hint">
+
+    </span>
+  </legend>
+
+    <p>You can either change the postcode or enter the address manually. </p>
+
+    <dl class="nhsuk-summary-list nhsuk-summary-list--no-border">
+
+      <p><b>Postcode</b></p>
+      <p>ABC 12A</p>
+
+    <div class="nhsuk-form-group">
+
+      <fieldset class="nhsuk-fieldset">
+        
+    
+        <div class="nhsuk-radios">
+    
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-1" name="noAddress" type="radio" value="change">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+              Change postcode
+            </label>
+          </div>
+    
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-2" name="noAddress" type="radio" value="enter">
+            <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+              Enter the address manually
+            </label>
+          </div>
+    
+        </div>
+      </fieldset>
+    
+    </div>
+
+
+    <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+      Continue
+    </button>
+          </form>
+          </div>
+
+
+
+  <script>
+    function setLocation(element) {
+            document.forms[0].action = element.value
+    }
+  </script>
+{% endblock %}

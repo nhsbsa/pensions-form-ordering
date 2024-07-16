@@ -28,6 +28,19 @@ router.post(/nav-form-select-radios/, (req, res) => {
     }
 });
 
+//contact-postcode-no-result
+router.post(/contact-postcode-no-result/, (req, res) => {
+
+    const contract = req.session.data['noAddress']
+
+    if (contract == 'change') {
+        res.redirect('contact-postcode-lookup')
+    } else {
+        res.redirect('contact-full-address')
+
+    }
+});
+
 
 
 
