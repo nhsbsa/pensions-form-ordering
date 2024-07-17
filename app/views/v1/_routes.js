@@ -54,6 +54,19 @@ router.post('/contact-postcode-lookup', (req, res) => {
     }
 });
 
+//contact-name
+router.post('/contact-name', (req, res) => {
+
+    let postcode = req.session.data['fullName']
+
+    if (postcode == 'John Smith') {
+        res.redirect('contact-email-required')
+    } else {
+        res.redirect('contact-email-confirmation')
+
+    }
+});
+
 
 
 
