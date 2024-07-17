@@ -67,6 +67,19 @@ router.post('/contact-name', (req, res) => {
     }
 });
 
+//Nav-dowload page
+router.post('/nav-download', (req, res) => {
+
+    const contract = req.session.data['accessForm']
+
+    if (contract == 'download') {
+        res.redirect('nav-print-form')
+    } else {
+        res.redirect('contact-name')
+
+    }
+});
+
 
 
 

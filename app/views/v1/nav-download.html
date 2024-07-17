@@ -32,7 +32,7 @@
 
     <div class="nhsuk-grid-column-full">
 
-      <form method="post">
+      <form action="nav-download" method="post">
 
       <!-- Change the page heading -->
 
@@ -62,23 +62,20 @@
           <div class="nhsuk-radios">
 
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="#" name="example" type="radio"
-                value="nav-print-form" onclick="setLocation(this);">
-              <label class="nhsuk-label nhsuk-radios__label" for="nav-download">
-               Download the form now
+              <input class="nhsuk-radios__input" id="download" name="accessForm" type="radio" value="download">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+                Download your form
               </label>
             </div>
-
+      
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="#" name="example" type="radio"
-                value="contact-name" onclick="setLocation(this);">
-              <label class="nhsuk-label nhsuk-radios__label" for="nav-download">
-                Post the form to me
+              <input class="nhsuk-radios__input" id="post" name="accessForm" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+                Post the form
               </label>
-            </div> 
-
+            </div>
+      
           </div>
-          
         </fieldset>
       
       </div>
