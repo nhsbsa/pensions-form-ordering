@@ -43,41 +43,32 @@
       <div class="nhsuk-form-group">
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l"> 
-            <span class="nhsuk-caption-l nhsuk-caption--bottom">Requesting a form</span>
+            <span class="nhsuk-caption-l nhsuk-caption--bottom">Your details</span>
             <h1 class="nhsuk-fieldset__heading">
-              Next steps</h1>
-              </legend>
-              <div class="nhsuk-inset-text">
-                <span class="nhsuk-u-visually-hidden">Information: </span>
-              
-                <p>You can now download your {{ data['contact'] | default('[NAME]') }} form and print it out.</p>
-              </div>
-              <p>When you complete the form, make sure you have all the documents and information you need. </p>
-              <p>Depending on the form, you will need to post your form to your employer or to NHS Pensions.</p>
-              <p>[Dynamic text below depending on the form that has been selected]</p>
-              <p>NHS Pensions <br>PO Box 683 <br>Unit 5 Newcastle Upon Tyne <br>NE5 9EE</p>
-
-            
-
-    
-
-        <fieldset class="nhsuk-fieldset">
-          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l"> 
-            <h1 class="nhsuk-fieldset__heading">
-              What to expect</h1>
+              What is your email address?
+            </h1>
           </legend>
-      
-     <ul class="nhsuk-list nhsuk-list--bullet">
-    
-            <li>Once we receive your form, we will process it and respond to you.</li>
-            
-        </ul>
+
+          <div class="nhsuk-form-group">
+
+            <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">   
+              <div>
+                <p>If your form request cannot be confirmed, we will require an email address to contact you.</p>
+              </div>
           
-        </fieldset>
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="input-width-20">
+                  Email address
+                </label>
+                <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+              </div>
+            </fieldset>
+          
+          </div>
       
       </div>
       <button class="nhsuk-button" type="submit">
-        Download form
+        Continue
       </button>
 
       <!-- End of content -->

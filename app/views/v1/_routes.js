@@ -41,6 +41,19 @@ router.post(/contact-postcode-no-result/, (req, res) => {
     }
 });
 
+//contact-postcode-lookup
+router.post('/contact-postcode-lookup', (req, res) => {
+
+    let postcode = req.session.data['enterPostcode']
+
+    if (postcode == 'ABC 123') {
+        res.redirect('contact-postcode-no-result')
+    } else {
+        res.redirect('contact-address-select')
+
+    }
+});
+
 
 
 

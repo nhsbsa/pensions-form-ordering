@@ -30,7 +30,7 @@
 }) }}
 
 
-        <form method=“post”>
+        
 
           <fieldset class="nhsuk-fieldset">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
@@ -44,7 +44,7 @@
 
     </span>
 
-      <form action="contact-address-select" method="post">
+      <form action="contact-postcode-lookup" method="post">
 
         <p>For example, AB1 2CD</p>
 
@@ -52,7 +52,7 @@
             <label class="nhsuk-label" for="input-width-10">
               Postcode 
             </label>
-            <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" type="text">
+            <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="enterPostcode" type="text">
           </div>
           
           <p class="nhsuk-body"><a href="contact-full-address">
@@ -61,13 +61,9 @@
          
 
 
-          <div class="nhsuk-form-group">
-            {{ button({
-              "href": "contact-address-select",
-              "text": "Find address"
-              }) }} 
-
-            </div>
+          <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+            Continue
+          </button>
 
           </div>
 
