@@ -21,7 +21,7 @@ router.post(/nav-form-select-radios/, (req, res) => {
     const contract = req.session.data['contact']
 
     if (contract == 'not') {
-        res.redirect('contact-name-email-man')
+        res.redirect('confirmation-form-not-listed')
     } else {
         res.redirect('nav-download')
 
