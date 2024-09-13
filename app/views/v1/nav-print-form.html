@@ -22,71 +22,58 @@
 <!-- For adding a back link -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
 {% block outerContent %}
+</br>
  
-{{ backLink({
-  "href": "javascript:history.go(-1)",
-  "text": "Go back"
-}) }}
-
-  <div class="nhsuk-grid-row">
-
-    <div class="nhsuk-grid-column-full">
-
-      <!-- Change the page heading -->
 
 
-      <!-- Add content here -->
-      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
-     
-      <div class="nhsuk-form-group">
-        <fieldset class="nhsuk-fieldset">
-          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l"> 
-            <span class="nhsuk-caption-l nhsuk-caption--bottom">Requesting a form</span>
-            <h1 class="nhsuk-fieldset__heading">
-              Next steps</h1>
-              </legend>
-              <div class="nhsuk-inset-text">
-                <span class="nhsuk-u-visually-hidden">Information: </span>
-              
-                <p>You can now download your {{ data['contact'] | default('[NAME]') }} form and print it out.</p>
-              </div>
-              <p>When you complete the form, make sure you have all the documents and information you need. </p>
-              <p>Depending on the form, you will need to post your form to your employer or to NHS Pensions.</p>
-              
-              <p>NHS Pensions <br>PO Box 683 <br>Unit 5 Newcastle Upon Tyne <br>NE5 9EE</p>
+        <form method=“post” action="">
 
-            
+          <div class="nhsuk-panel nhsuk-panel--confirmation" style="background-color:#005eb8; color:white; text-align:center; padding: 40px; margin-bottom:40px">
+            <h1 class="nhsuk-panel__title nhsuk-u-margin-bottom-4">
+              Form request has been successful 
+            </h1>
+          </div>
 
-    
+          <p>Thank you for using our form request service.</p>
 
-        <fieldset class="nhsuk-fieldset">
-          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l"> 
-            <h1 class="nhsuk-fieldset__heading">
-              What to expect</h1>
-          </legend>
-      
+        
+
+            <p class="nhsuk-heading-m">Next steps
+            </p>
+                    
+          <p>You can now download your [FORM NAME] and print it out.</p>
+          <p>Your form will have guidance on what you need and where it should be sent.</p>
    
-    
-           <p>Once we receive your form, we will process it and respond to you.</p> 
+          <button class="nhsuk-button" data-module="nhsuk-button" type="submit" href="start">
+            Download form
+          </button>
+          <p><a class="nhsuk-link" href="nav-form-select-radios">Request another form</a></p>
+
+   
+
+          <fieldset class="nhsuk-fieldset">
+
             
-       
+            
+            <p class="nhsuk-heading-m">Get help with your form request</p>
+  
+            <p>If you have any more questions about your form request, <a class="nhsuk-link" href="https://www.nhsbsa.nhs.uk/nhs-pensions">visit our website</a>.</p>
+
+            <p><a class="nhsuk-link" href="https://online1.snapsurveys.com/interview/1fde8743-2a0b-4bc7-9961-004dc60fb689">What did you think of this service?</a> (Survey will take 30 seconds)</p>
           
-        </fieldset>
-      
-      </div>
-      <button class="nhsuk-button" type="submit">
-        Download form
-      </button>
+          </fieldset>
 
-      <!-- End of content -->
+    </div>
+
     </form>
-    </div>  
-
+    
   </div>
 
-  <script>
-    function setLocation(element) {
-      document.forms[0].action = element.value
-    }
-  </script>
+
+<script>
+  function setLocation(element) {
+    document.forms[0].action = element.value
+  }
+</script>
 {% endblock %}
+
