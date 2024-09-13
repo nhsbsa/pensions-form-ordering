@@ -23,7 +23,11 @@
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
 {% block outerContent %}
 </br>
- 
+{{ backLink({
+  "href": "javascript:history.go(-1)",
+  "text": "Go back"
+}) }}
+
 <form method=“post” action="nav-form-select-radios">
 
 <div class="nhsuk-grid-row">
