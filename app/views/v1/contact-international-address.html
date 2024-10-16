@@ -28,37 +28,63 @@
     "text": "Go back"
   }) }}
 
-
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
       <h1 class="nhsuk-heading-l">
         <span class="nhsuk-caption-l nhsuk-caption--bottom">Your details</span>
-
-    </span>
-
+        <span class="nhsuk-heading-l">What is your postal address?</span> 
+      
+     
+     
+    
+   
+    
       <form action="contact-check-your-answers" method="post">
 
-        <div class="nhsuk-character-count" data-module="nhsuk-character-count" data-maxlength="200">
-
-          <div class="nhsuk-form-group">
-            <h1 class="nhsuk-label-wrapper">
-              <label class="nhsuk-label nhsuk-label--l" for="more-detail">
-                What is your postal address?
-              </label>
-            </h1>
-            <div class="nhsuk-hint" id="more-detail-hint">
-              Include details such as your building number or name, street or road name, province or area, post or zip code and country.
-            </div>
-            <textarea class="nhsuk-textarea nhsuk-js-character-count" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
-          </div>
-        
-          <div class="nhsuk-hint nhsuk-character-count__message" id="more-detail-info">
-            You can enter up to 200 characters
-          </div>
-        
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="input-width-20">
+            Address line 1
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-30" id="input-width-30" name="test-width-30" type="text">
         </div>
 
-            </div>
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="input-width-20">
+            Address line 2 (optional)
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-30" id="input-width-30" name="test-width-30" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="input-width-20">
+            Town or city
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+        </div>
+
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="input-width-20">
+            County, province or region (optional)
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-20" id="input-width-20" name="test-width-20" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="input-width-10">
+            Postcode
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="input-width-10">
+            Country
+          </label>
+          <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
+        </div>
+
+          </div>
 
 </div>
 
