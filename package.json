@@ -20,6 +20,8 @@
   "dependencies": {
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.27.2",
+    "ansi-colors": "^4.1.3",
+    "ansi-styles": "^6.2.1",
     "body-parser": "^2.2.0",
     "browser-sync": "^3.0.4",
     "client-sessions": "^0.8.0",
@@ -37,8 +39,8 @@
     "lodash": "^4.17.21",
     "nhsuk-frontend": "^9.6.3",
     "nunjucks": "^3.2.4",
-    "plugin-error": "^2.0.1",
     "path": "^0.12.7",
+    "plugin-error": "^2.0.1",
     "sass-embedded": "1.77.5"
   },
   "devDependencies": {
