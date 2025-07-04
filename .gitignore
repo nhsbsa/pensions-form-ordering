@@ -67,4 +67,4 @@ Thumbs.db
 .scannerwork
 
 # Code coverage
-coverage
+coveragenode_modules/
