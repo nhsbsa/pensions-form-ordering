@@ -5,10 +5,10 @@
 -->
 
 <!-- Extends the layout from /docs/views/template.html -->
-{% extends "template.html" %}
+{% extends "prototype-kit-template.njk" %}
 
 <!-- Add your custom CSS or Sass in /app/assets/sass/main.scss -->
-{% block headCSS %}
+{% block head %}
   <link href="/css/main.css" rel="stylesheet">
 {% endblock %}
 
@@ -55,8 +55,8 @@
         "label": "Home"
       },
       {
-        "URL": "/clear-data",
-        "label": "Clear Data"
+        "URL": "/prototype-admin/reset?returnPage=" + (currentPage | urlencode),
+        "label": "Reset data"
       }
     ]
   })}}
