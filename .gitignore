@@ -47,9 +47,6 @@ jspm_packages/
 # Optional npm cache directory
 .npm
 
-# Optional eslint cache
-.eslintcache
-
 # Optional REPL history
 .node_repl_history
 
@@ -67,4 +64,7 @@ Thumbs.db
 .scannerwork
 
 # Code coverage
-coveragenode_modules/
+coverage
+
+# ESlint cache
+.cache

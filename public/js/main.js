@@ -1,2 +1,2 @@
 // ES6 or Vanilla JavaScript
-"use strict";
+"use strict";//# sourceMappingURL=main.js.map
