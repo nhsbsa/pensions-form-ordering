@@ -9633,11 +9633,6 @@ b {
   }
 }
 
-@media (min-width: 40.0625em) {
-  .nhsuk-back-link {
-    padding-top: 24px;
-  }
-}
 .beta-banner {
   padding: 16px 0;
   background-color: #ffffff;
