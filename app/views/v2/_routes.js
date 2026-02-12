@@ -11,12 +11,12 @@ const router = express.Router();
 
 
 // Start page
-router.post(v2/start/, (_req, res) => {
+router.post(v2/start, (_req, res) => {
     res.redirect('nav-form-select-radios')
 });
 
 //Nav-form-select-radios page
-router.post(/nav-form-select-radios/, (req, res) => {
+router.post(v2/nav-form-select-radios, (req, res) => {
 
     const contract = req.session.data['contact']
 
@@ -29,7 +29,7 @@ router.post(/nav-form-select-radios/, (req, res) => {
 });
 
 //contact-postcode-no-result
-router.post(/contact-postcode-no-result/, (req, res) => {
+router.post(v2/contact-postcode-no-result, (req, res) => {
 
     const contract = req.session.data['noAddress']
 
