@@ -1,0 +1,70 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Form ordering
+{% endblock %}
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+        <form method=“post” action="">
+ 
+          <div class="nhsuk-panel nhsuk-panel--confirmation" style="background-color:#005eb8; color:white; text-align:center; padding: 40px; margin-bottom:40px">
+            <h1 class="nhsuk-panel__title nhsuk-u-margin-bottom-4">
+              Form request has been successful 
+            </h1>
+          </div>
+
+          <p>Thank you for using our form request service.</p>
+
+        
+
+            <p class="nhsuk-heading-m">Next steps
+            </p>
+                    
+          <p>You can now download your [FORM NAME].</p>
+          <p>Print out your form so you can fill it in and sign it.</p>
+          <p>Your form will have guidance on what you need and where it should be sent.</p>
+          <p>The download will open in a new tab as a PDF.</p>
+   
+          <button class="nhsuk-button" data-module="nhsuk-button" type="submit" href="start">
+            Download your form
+          </button>
+          <p><a class="nhsuk-link" href="nav-form-select-radios">Request another form</a></p>
+
+   
+
+          <fieldset class="nhsuk-fieldset">
+
+            
+            
+            <p class="nhsuk-heading-m">Get help with your form request</p>
+  
+            <p>If you have any more questions about your form request, <a class="nhsuk-link" href="https://www.nhsbsa.nhs.uk/nhs-pensions">visit our website</a>.</p>
+
+            <p><a class="nhsuk-link" href="https://online1.snapsurveys.com/interview/1fde8743-2a0b-4bc7-9961-004dc60fb689">What did you think of this service?</a> (Survey will take 30 seconds)</p>
+          
+          </fieldset>
+
+    </div>
+  </div>
+    </form>
+    
+  
+
+<script>
+  function setLocation(element) {
+    document.forms[0].action = element.value
+  }
+</script>
+{% endblock %}
+

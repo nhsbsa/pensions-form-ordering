@@ -1,0 +1,46 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Form ordering
+{% endblock %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <div class="nhsuk-panel nhsuk-panel--confirmation">
+      <h1 class="nhsuk-panel__title">
+        Job advert published
+      </h1>
+      <div class="nhsuk-panel__body">
+        You have created a job advert for xxxxxxx.<br>
+        The reference number is<br>
+        <strong>HDJ2123F</strong>
+      </div>
+    </div>
+
+      <p><a href="#" target="_blank" rel="noreferrer">View</a> the advert as seen by applicants (opens in a new window).</p>
+
+      <div class="nhsuk-form-group">
+        <button class="nhsuk-button" type="submit">
+          Return to your job vacancies
+        </button>
+      </div>
+
+      <h2 class="nhsuk-heading-m">How could we improve NHS Jobs service?</h2>
+        <p>
+          <a href="#" class="nhsuk-link">Give feedback</a> about this service.
+        </p>
+
+    </div>
+  </div>
+
+{% endblock %}

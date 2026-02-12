@@ -43,6 +43,15 @@
     </div>
 </div>
 
+{% from 'back-link/macro.njk' import backLink %}
+{% if not hideBack %}
+  <div class="nhsuk-width-container">
+    {{ backLink({
+      "href": "javascript:history.go(-1)",
+      "text": "Back"
+    }) }}
+  </div>
+{% endif %}
 {% endblock %}
 
 <!-- Edit the footer -->
@@ -70,3 +79,10 @@
     {% block pageScripts %}{% endblock %}
   {% endblock %}
 {% endblock %}
+
+
+
+
+
+
+

@@ -1,0 +1,54 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Form ordering
+{% endblock %}
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+
+        <h1 class="nhsuk-heading-l">
+          There is a problem 
+        </h1>
+
+
+   <p>If you: </p>
+   <ul class="nhsuk-list nhsuk-list--bullet">
+  
+    <li>typed the web address, check it is correct. </li>
+    <li>pasted the web address, check you copied the entire address.</li>
+    <li>typed the web address correctly or selected a link or button, you can start again.</li>
+    <li>requested a form and you are trying to go back, you can start again and request another form.</li>
+    
+</ul> 
+
+            
+              {{ button({
+                  "href": "start",
+                  "text": "Request a form"
+                  }) }} 
+                  
+
+    
+                  
+                    
+
+         
+      </div>
+  </div>
+
+  <script>
+    function setLocation(element) {
+      document.forms[0].action = element.value
+    }
+  </script>
+{% endblock %}

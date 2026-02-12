@@ -1,0 +1,105 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Form ordering
+{% endblock %}
+
+{% block content %}
+ 
+  <div class="nhsuk-grid-row">
+
+     <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="nav-download" method="post">
+
+      <!-- Change the page heading -->
+
+
+      <!-- Add content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+     
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l"> 
+            <span class="nhsuk-caption-l nhsuk-caption--bottom">Request a form</span>
+            <h1 class="nhsuk-fieldset__heading">
+              Which form would you like?</h1>
+          </legend>
+
+        <p>Select a form from the available options</p>
+        
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="relationship">
+              Form type
+            </label>
+            <select class="nhsuk-select nhsuk-u-width-one-half" id="one-half" name="formType">
+              <option value="0"></option>
+              <option value="AW8P ">AW8P</option>
+              <option value="DB2">DB2</option>
+              <option value="DCF">DCF</option>
+              <option value="RF12">RF12</option>
+              <option value="AW240">AW240</option>
+              <option value="SM26C">SM26C</option>
+              <option value="PN1">PN1</option>
+              <option value="SD502">SD502</option>
+              <option value="Change of bank details or address">Change of bank details or address</option>
+              <option value="DB1">DB1</option>
+            </select>
+          </div>
+
+          <!--<div class="nhsuk-inset-text">
+            <span class="nhsuk-u-visually-hidden">Information: </span>
+          
+            <p>You have chosen to download a [NAME] form.</p>
+          </div>-->
+
+          <div class="nhsuk-radios nhsuk-radios--conditional">
+          
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="contact-name" aria-controls="conditional-contact-1" aria-expanded="false"
+              value="SDNUMBER" onclick="setLocation(this);">
+              <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+                The form I want is not listed
+              </label>
+            </div>
+      
+            <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
+      
+              <div class="nhsuk-form-group">
+                <p>If you can not find the form you need in the list, request the type of form you would like in the box below by entering a reference number or name.</p>
+                <label class="nhsuk-label" for="FORMREF">
+                  Form number or name
+                </label>
+                <input class="nhsuk-input nhsuk-u-width-two-thirds" id="number" name="number" type="text">
+              </div>
+      
+            </div>
+            
+          </div>
+          
+        </fieldset>
+      
+      </div>
+      <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+        Continue
+      </button>
+
+      <!-- End of content -->
+    </form>
+    </div>  
+
+  </div>
+
+  <script>
+    function setLocation(element) {
+      document.forms[0].action = element.value
+    }
+  </script>
+{% endblock %}

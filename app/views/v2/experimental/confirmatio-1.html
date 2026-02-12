@@ -1,0 +1,79 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Form ordering
+{% endblock %}
+
+{% block content %}
+
+        <form method=“post”>
+
+          <div class="nhsuk-panel nhsuk-panel--confirmation" style="background-color:#005eb8; color:white; text-align:center; padding: 40px; margin-bottom:40px">
+            <h1 class="nhsuk-panel__title nhsuk-u-margin-bottom-4">
+              Form request has been sent
+            </h1>
+          </div>
+
+          <p>You've successfully requested a {{ data['formType'] | default('[NAME]') }} form to be sent to:</p>
+
+          <div class="nhsuk-inset-text">
+            <span class="nhsuk-u-visually-hidden">Information: </span>
+          
+            <p>Mrs. Mia Bloggs</br>
+            <p>10 Downing Street</br>
+            London</br>
+            SW1A 2AA</p>
+          </div>
+
+          <p>Thank you for using our form request service.
+            We've sent you an email to confirm we have received your form request.</p>
+
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                What happens next
+              </h1>
+            </legend>
+             <p>If you've selected a form, we will send it to you to fill in.</p>
+             <p>When you complete the form, make sure you have all the documents and information you need.</p>
+             <p>Depending on the form, you will need to post your form to your employer or to NHS
+              Pensions.</p>
+             <p>We will contact you if your form wasn't listed or you need some help with a form.</p>
+             {{ button({
+              "href": "start",
+              "text": "Request another form"
+              }) }} 
+
+          </fieldset>
+          
+          <fieldset class="nhsuk-fieldset">
+            
+              <h3>Get help with your form request</h3>
+  
+            <p>If you have any more questions before or after receiving your form, you can <a class="nhsuk-link" href="https://www.nhsbsa.nhs.uk/member-hub/contact-nhs-pensions-members">contact us</a>.</p>
+
+            <p><a class="nhsuk-link" href="https://online1.snapsurveys.com/interview/589f166f-daa9-4791-ba4d-e400f6adbc80?preview=true">What did you think of this service?</a> (Survey will take 30 seconds)</p>
+          
+          </fieldset>
+
+    </div>
+
+    </form>
+    
+  </div>
+
+
+<script>
+  function setLocation(element) {
+    document.forms[0].action = element.value
+  }
+</script>
+{% endblock %}
+

@@ -1,0 +1,97 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Form ordering
+{% endblock %}
+
+{% block content %}
+ 
+{{ backLink({
+  "href": "javascript:history.go(-1)",
+  "text": "Go back"
+}) }}
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form method=“post”>
+
+      <!-- Change the page heading -->
+
+
+      <!-- Add content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+     
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l"> 
+            <span class="nhsuk-caption-l nhsuk-caption--bottom">Your details</span>
+            <h1 class="nhsuk-fieldset__heading">
+              Do you want an email confirmation?
+            </h1>
+          </legend>
+
+          <div class="nhsuk-form-group">
+
+            <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">   
+              <div>
+                <p>If you would like an email confirmation after you have sent your form request, select yes and enter your email address.</p>
+              </div>
+          
+              <div class="nhsuk-radios nhsuk-radios--conditional">
+          
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="contact-is-address-uk" aria-controls="conditional-contact-2" aria-expanded="false" value="yes" onclick="setLocation(this);">
+                  <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
+                    Yes
+                  </label>
+                </div>
+          
+                <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-2">
+          
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="phone">
+                      Email address
+                    </label>
+                    <input class="nhsuk-input nhsuk-u-width-two-thirds" id="phone" name="phone" type="text">
+                  </div>
+          
+                </div>
+          
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="contact-3" name="contact" type="radio" value="contact-is-address-uk" aria-controls="conditional-contact-3" aria-expanded="false" value="contact-is-address-uk" onclick="setLocation(this);">
+                  <label class="nhsuk-label nhsuk-radios__label" for="contact-3">
+                    No
+                  </label>
+                </div>
+          
+              </div>
+            </fieldset>
+          
+          </div>
+      
+      </div>
+      <button class="nhsuk-button" type="submit">
+        Continue
+      </button>
+
+      <!-- End of content -->
+    </form>
+    </div>  
+
+  </div>
+
+  <script>
+    function setLocation(element) {
+      document.forms[0].action = element.value
+    }
+  </script>
+{% endblock %}

@@ -1,0 +1,261 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Form ordering
+{% endblock %}
+
+{% block content %}
+ 
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="nav-form-select-radios" method="post">
+
+      <!-- Change the page heading -->
+
+
+      <!-- Add content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+     
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l"> 
+            <span class="nhsuk-caption-l nhsuk-caption--bottom">Request a form</span>
+            <h1 class="nhsuk-fieldset__heading">
+              Which form would you like?
+            </h1>
+          </legend>
+        
+            <p>
+              Select a form from the available options
+            </p>
+        
+            <div class="nhsuk-radios nhsuk-radios--conditional">
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="AW8P" aria-controls="conditional-contact-1" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+                Deferred benefit claim form (AW8P)
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
+        
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-hint nhsuk-radios__hint" for="phone">
+                    Use the AW8P form if you previously left all NHS employment without retiring and 
+                    you are now claiming deferred pension benefits. You can also use it if you are 
+                    currently contributing to the 2015 Scheme but you wish to claim pension rights you 
+                    previously earned in the 1995/2008 Scheme.
+                  </label>          
+                </div>      
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="contact-2" name="contact" type="radio" value="Change of bank details or address change" aria-controls="conditional-contact-2" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="contact-2">
+                 Change of bank details or address change
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-2">
+        
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-hint nhsuk-radios__hint" for="phone">
+                    Use this form if you are receiving your pension payments and need to 
+                    tell us your new bank details or address.
+                  </label>              
+                </div>
+              </div>
+        
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="contact-3" name="contact" type="radio" value="DCF" aria-controls="conditional-contact-3" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="contact-3">
+                 Dependant claim form (DCF)  
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-3">
+        
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-hint nhsuk-radios__hint" for="phone">
+                  <p> Use the DCF to claim death benefits or an allocated pension in the event of a bereavement.</p>
+                  </label>
+                </div>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="contact-4" name="contact" type="radio" value="AW240" aria-controls="conditional-contact-4" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="contact-4">
+                  Consideration of entitlement for early payment of deferred benefits due to ill health (AW240)
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-4">
+        
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-hint nhsuk-radios__hint" for="phone">
+                  <p> Use the AW240 form if you become too ill to work since leaving NHS employment and you want to apply for early payment of deferred NHS pension benefits. 
+                    You must have at least 2 years service in the NHS Pension Scheme, be under your normal pension age and not in NHS employment.   </p>
+                   </label>
+                </div>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="contact-5" name="contact" type="radio" value="DB1" aria-controls="conditional-contact-5" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="contact-5">
+                  Lump sum death benefit (DB1)
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-5">
+        
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-hint nhsuk-radios__hint" for="phone">
+                  <p> Only use the DB1 form if your pension scheme membership ended before 1 April 2008. 
+                    Use it if in the event of your death, you want to pay the lump sum to your legal personal 
+                    representative instead of your spouse or civil partner. You can use this form if you are a 
+                    pension credit member and your pension sharing order started before 1 April 2000. 
+                    You can also use this form if you want to change or cancel a previous nomination.</p>
+                  </label>
+                </div>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="contact-6" name="contact" type="radio" value="DB2" aria-controls="conditional-contact-6" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="contact-6">
+                  Lump sum death benefit nomination (DB2)
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-6">
+        
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-hint nhsuk-radios__hint" for="phone">
+                  <p>Only use the DB2 form if you have pension scheme membership on or after 1 April 2008. 
+                    Use it to tell us who should receive the lump sum in the event of your death. 
+                    You can also use this form to change or cancel a previous nomination.   </p>
+                  </label>
+                </div>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="contact-7" name="contact" type="radio" value="PN1" aria-controls="conditional-contact-7" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="contact-7">
+                  Partner nomination (PN1)
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-7">
+        
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-hint nhsuk-radios__hint" for="phone">
+                  <p>Use the PN1 form if you want to nominate a partner to receive an adult dependant’s pension in the event of your death. 
+                    You must have pension scheme membership on or after 1 April 2008.</p> </label>
+                </div>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="contact-8" name="contact" type="radio" value="RF12" aria-controls="conditional-contact-8" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="contact-8">
+                  Application for a refund of pension contributions (RF12)
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-8">
+        
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-hint nhsuk-radios__hint" for="phone">
+                  <p>Only use the RF12 if you left the NHS Pension Scheme before your normal pension age and have less than two years qualifying membership in the Scheme. 
+                    Use it if you want to apply for a refund of your pension contributions.</p>
+                    </label>
+                </div>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="contact-9" name="contact" type="radio" value="SD502" aria-controls="conditional-contact-9" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="contact-9">
+                  Application to leave NHS Pension Scheme (SD502)
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-9">
+        
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-hint nhsuk-radios__hint" for="phone">
+                  <p>Use the SD502 form if you want to stop actively contributing  to the NHS Pension Scheme. 
+                    You and your employer must complete the form. 
+                    This is the only way to leave the NHS Pension Scheme where you are actively continuing in NHS employment.</p>
+                  </label>
+                </div>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="contact-10" name="contact" type="radio" value="SM27C" aria-controls="conditional-contact-10" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-radios__label" for="contact-10">
+                  Membership enquiry with NHS Pensions (Form SM27C)
+                </label>
+              </div>
+        
+              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-10">
+        
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-hint nhsuk-radios__hint" for="phone">
+                  <p>Use the SM27C form if you have an enquiry about your 
+                    NHS Pension Scheme membership and your employer has been unable to help with this.</p>
+                  </label>
+                </div>
+              </div>
+        
+            </div>
+          
+        
+        
+
+          
+          <div class="nhsuk-radios__divider">or</div>
+
+          <div class="nhsuk-radios">
+          
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contact-11" name="contact" type="radio" value="not" aria-controls="conditional-contact-11" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="contact-11">
+                The form I want is not listed
+              </label>
+            </div>
+      
+            
+      
+            </div>
+            
+          </div>
+          
+        </fieldset>
+      
+      </div>
+    </div>
+      <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+        Continue
+      </button>
+
+      <!-- End of content -->
+    </form>
+    </div>  
+
+  </div>
+
+
+  <script>
+    function setLocation(element) {
+      document.forms[0].action = element.value
+    }
+  </script>
+{% endblock %}

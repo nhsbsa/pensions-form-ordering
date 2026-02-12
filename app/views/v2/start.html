@@ -1,0 +1,82 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Form ordering
+{% endblock %}
+
+{% block content %}
+ 
+
+
+  <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+ 
+          <h1 class="nhsuk-heading-l">
+            Request a form
+          </h1>
+
+     <p class="nhsuk-heading-m">Use this service to order a form from NHS Pensions </p>
+     <p>With this service you can: </p>
+     <ul class="nhsuk-list nhsuk-list--bullet">
+    
+      <li>choose the form you need</li>
+      <li>download your form and print it out</li>
+      <li>have the form posted to you to fill in</li>
+      
+  </ul>
+  <p class="nhsuk-heading-m">Before you start</p>
+
+<p>If you would like the form posted to you, we will need:</p>
+     <ul class="nhsuk-list nhsuk-list--bullet">
+    
+            <li>your name</li>
+            <li>your address</li>
+            
+        </ul>
+              
+                {{ button({
+                    "href": "nav-form-select-radios",
+                    "text": "Start now"
+                    }) }} 
+                    
+
+        <details class="nhsuk-details">
+          <summary class="nhsuk-details__summary">
+            <span class="nhsuk-details__summary-text">
+            How we will process your personal details:
+            </span>
+          </summary>
+        <div class="nhsuk-details__text">
+          
+          <p>The details we store will be:</p>
+     <ul class="nhsuk-list nhsuk-list--bullet">
+    
+      <li>your name</li>
+      <li>your postal address</li>
+      <li>your form request</li>
+      
+  </ul>
+      <p>After 60 days, we will delete any personal details related to your request and we cannot
+        recover them.</p>
+      <p>For more information on how we process your personal details, please see our <a href="https://www.nhsbsa.nhs.uk/our-policies/privacy">[privacy notice]</a>. </p>
+           
+                      </div>
+                    </details>
+
+            </form>
+        </div>
+    </div>
+
+    <script>
+      function setLocation(element) {
+        document.forms[0].action = element.value
+      }
+    </script>
+{% endblock %}

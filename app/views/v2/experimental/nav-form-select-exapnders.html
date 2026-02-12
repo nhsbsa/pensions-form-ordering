@@ -1,0 +1,241 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Form ordering
+{% endblock %}
+
+{% block content %}
+ 
+{{ backLink({
+  "href": "javascript:history.go(-1)",
+  "text": "Go back"
+}) }}
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="nav-download" method="post">
+
+      <!-- Change the page heading -->
+
+
+      <!-- Add content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+     
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l"> 
+            <span class="nhsuk-caption-l nhsuk-caption--bottom">Requesting a form</span>
+            
+
+          <div class="nhsuk-form-group">
+
+            <fieldset class="nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                <h1 class="nhsuk-fieldset__heading">
+                  Which form would you like?
+                </h1>
+              </legend>
+          
+              <details class="nhsuk-details nhsuk-expander">
+                <summary class="nhsuk-details__summary">
+                  <span class="nhsuk-details__summary-text">
+                    Deferred benefit claim form (AW8P)
+                  </span>
+                </summary>
+                <div class="nhsuk-details__text">
+                  <p> Use the AW8P form if you are a deferred member of the NHS pension scheme and want to claim your pension benefits. 
+                    Only use the AW8P form if you have left NHS employment completely.  </p>
+                    <p><a href="https://www.nhsbsa.nhs.uk/sites/default/files/2024-03/Nomination-DB2-20240305-%28V11%29%20-%20Form%20eneabled.pdf"> 
+                      Deferred benefit claim form (AW8P)</a></p>
+                  </ul>
+                </div>
+              </details>
+
+              <details class="nhsuk-details nhsuk-expander">
+                <summary class="nhsuk-details__summary">
+                  <span class="nhsuk-details__summary-text">
+                    Declaration pages from AW8P and DCF 
+                  </span>
+                </summary>
+                <div class="nhsuk-details__text">
+                  <p>Use the AW8P form if you are a deferred member of the NHS pension scheme and want to claim your pension benefits. 
+                    Only use the AW8P form if you have left NHS employment completely.</p>
+                    <p>Going online to see them (if you have signed up for <a href="https://www.nhsbsa.nhs.uk/sites/default/files/2023-03/NHSPensions_AW8Pform_%28V22%29_202303.pdf"> 
+                      Declaration pages from AW8P and DCF </a>) </p>
+                  </ul>
+                </div>
+              </details>
+
+              <details class="nhsuk-details nhsuk-expander">
+                <summary class="nhsuk-details__summary">
+                  <span class="nhsuk-details__summary-text">
+                    Declaration pages from AW8P and DCF 
+                  </span>
+                </summary>
+                <div class="nhsuk-details__text">
+                  <p>Use the AW8P form if you are a deferred member of the NHS pension scheme and want to claim your pension benefits. 
+                    Only use the AW8P form if you have left NHS employment completely.</p>
+                    <p>Going online to see them (if you have signed up for <a href="https://www.nhsbsa.nhs.uk/sites/default/files/2020-10/Dep%20Claim%20Form%20%28V5%29%2010.2020.pdf"> 
+                      Declaration pages from AW8P and DCF </a>) </p>
+                  </ul>
+                </div>
+              </details>
+
+            </details>
+
+          </details>
+          <details class="nhsuk-details nhsuk-expander">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                DCF Form to claim death benefits and/or an allocated pension, or report the death of a member or pensioner 
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <p>Use the AW8P form if you are a deferred member of the NHS pension scheme and want to claim your pension benefits. 
+                Only use the AW8P form if you have left NHS employment completely.</p>
+                <p>Going online to see them (if you have signed up for <a href="https://www.nhsbsa.nhs.uk/sites/default/files/2020-10/Dep%20Claim%20Form%20%28V5%29%2010.2020.pdf"> 
+                  DCF Form to claim death benefits and/or an allocated pension, or report the death of a member or pensioner</a>) </p>
+              </ul>
+            </div>
+          </details>
+
+          <details class="nhsuk-details nhsuk-expander">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                PN1 Nomination-PN1-20190207-(V10) 
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <p>Use the AW8P form if you are a deferred member of the NHS pension scheme and want to claim your pension benefits. 
+                Only use the AW8P form if you have left NHS employment completely.</p>
+                <p>Going online to see them (if you have signed up for <a href="https://www.nhsbsa.nhs.uk/sites/default/files/2019-02/Nomination-PN1-20190207-%28V10%29.pdf"> 
+                  PN1 Nomination-PN1-20190207-(V10) </a>) </p>
+              </ul>
+            </div>
+          </details>
+
+          <details class="nhsuk-details nhsuk-expander">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                RF12 form
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <p>Use the AW8P form if you are a deferred member of the NHS pension scheme and want to claim your pension benefits. 
+                Only use the AW8P form if you have left NHS employment completely.</p>
+                <p>Going online to see them (if you have signed up for <a href="https://www.nhsbsa.nhs.uk/sites/default/files/2022-08/RF12%20%28V13%29%20-%20Digital%20-%2008.2022.pdf"> 
+                  RF12 form</a>) </p>
+              </ul>
+            </div>
+          </details>
+
+        </details>
+
+      </details>  <details class="nhsuk-details nhsuk-expander">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            SD502 form
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Use the AW8P form if you are a deferred member of the NHS pension scheme and want to claim your pension benefits. 
+            Only use the AW8P form if you have left NHS employment completely.</p>
+            <p>Going online to see them (if you have signed up for <a href="https://www.nhsbsa.nhs.uk/sites/default/files/2021-05/SD502%20%28V22%29%2005.2021.pdf"> 
+              SD502 form</a>) </p>
+          </ul>
+        </div>
+      </details>
+
+      <details class="nhsuk-details nhsuk-expander">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            SM27C form
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Use the AW8P form if you are a deferred member of the NHS pension scheme and want to claim your pension benefits. 
+            Only use the AW8P form if you have left NHS employment completely.</p>
+            <p>Going online to see them (if you have signed up for <a href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fwww.nhsbsa.nhs.uk%2Fsites%2Fdefault%2Ffiles%2F2024-03%2FService-SM27C%2520NHS%2520Pensions%2520membership%2520enquiry-20240325-%2528V6%2529.docx&wdOrigin=BROWSELINK"> 
+              SM27C form</a>) </p>
+          </ul>
+        </div>
+      </details>
+
+      <details class="nhsuk-details nhsuk-expander">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Taps mandate form
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Use the AW8P form if you are a deferred member of the NHS pension scheme and want to claim your pension benefits. 
+            Only use the AW8P form if you have left NHS employment completely.</p>
+            <p>Going online to see them (if you have signed up for <a href="https://www.nhsbsa.nhs.uk/sites/default/files/2024-04/TC%20Change%20of%20address%20and%20bank%20details-20240419-%28V4%29.pdf"> 
+              Taps mandate form</a>) </p>
+          </ul>
+        </div>
+      </details>
+
+    </details>
+
+  </details>
+
+
+                <div class="nhsuk-radios__divider">or</div>
+
+                <div class="nhsuk-radios nhsuk-radios--conditional">
+          
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="contact-name" aria-controls="conditional-contact-1" aria-expanded="false"
+                    value="SDNUMBER" onclick="setLocation(this);">
+                    <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+                      The form I want is not listed
+                    </label>
+                  </div>
+            
+                  <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
+            
+                    <div class="nhsuk-form-group">
+                      <p>If you can not find the form you need in the list, request the type of form you would like in the box below by entering a reference number or name.</p>
+                      <label class="nhsuk-label" for="FORMREF">
+                        Form number or name
+                      </label>
+                      <input class="nhsuk-input nhsuk-u-width-two-thirds" id="number" name="number" type="text">
+                    </div>
+            
+                  </div>
+                  
+                </div>
+          
+                
+        </div>
+      </div>
+    </div>
+      
+      
+      <button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+        Continue
+      </button>
+      </div>
+
+      <!-- End of content -->
+    </form>
+    </div>  
+
+  </div>
+
+  <script>
+    function setLocation(element) {
+      document.forms[0].action = element.value
+    }
+  </script>
+{% endblock %}
